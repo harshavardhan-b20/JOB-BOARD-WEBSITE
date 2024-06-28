@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JobBoard </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link rel="stylesheet" href="css/custom-bs.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/line-icons/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/quill.snow.css">
+    
+    <script>
+      function logout() {
+          // Perform any logout operations if needed
+          // Redirect to login page
+          window.location.href = "/jobboard/login.html";
+      }
+  </script>
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">    
+  </head>
+  <body id="top">
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+    
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="Jobseeker.html">JobBoard</a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="Jobseeker.html" class="nav-link">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              
+              </li>
+              <li class="has-children">
+                <a href="#">Pages</a>
+                <ul class="dropdown">
+                  
+                  <li><a href="testimonials.html">Testimonials</a></li>
+                  <li><a href="faq.html">Frequently Ask Questions</a></li>
+                  
+                </ul>
+              </li>
+              
+              <li><a href="blog.html" class="active">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              
+              <li class="d-lg-none"><a href="login.html">Log out</a></li>
+            </ul>
+          </nav>
+          
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto">
+              <button onclick="logout()"  id="logoutButton" class="btn btn-primary border-width-2 d-none d-lg-inline-block" title="Log Out"><span class="mr-2 icon-lock_outline"></span>Log Out</button>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="text-white font-weight-bold">Candidate's Testimonials</h1>
+            <div class="custom-breadcrumbs">
+              <a href="#">Home</a> <span class="mx-2 slash">/</span>
+              <span class="text-white"><strong>Testimonials</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section" id="next-section">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;As a Full-Stack Developer passionate about building robust and scalable web applications, I rely on platforms like the job board website to explore diverse career opportunities and expand my skill set. My recent engagement with this platform has been incredibly rewarding. I enthusiastically recommend the job board website to my fellow female Full-Stack Developers in India. Its user-friendly interface, diverse job listings, and emphasis on company culture make it an invaluable platform for navigating the dynamic landscape of full-stack development careers.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Priya Patel</h3>
+                  <span class="position">Full-Stack Developer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;As a Cybersecurity Analyst committed to safeguarding digital assets and mitigating cyber threats, I rely on platforms like the job board website to explore new opportunities and contribute to enhancing digital security frameworks. My recent experience with this platform has been exceptionally beneficial.I highly recommend the job board website to my fellow Indian Cybersecurity Analysts. Its user-friendly interface, diverse job listings, and focus on company culture make it an indispensable platform for navigating the competitive landscape of cybersecurity careers in India.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Rajesh Singh</h3>
+                  <span class="position">Cybersecurity Analyst</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;As a System Analyst striving to optimize organizational efficiency through innovative technology solutions, I rely on platforms like the job board website to explore new career opportunities and contribute my expertise to dynamic projects. My recent engagement with this platform has been highly enriching.I enthusiastically recommend the job board website to my fellow Indian System Analysts. Its user-friendly interface, emphasis on company culture make it an invaluable resource for navigating the competitive landscape of system analysis careers in India.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_3.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Siddharth Sharma</h3>
+                  <span class="position">System Analyst</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;As a frontend developer dedicated to crafting visually appealing and user-friendly web experiences, I rely on platforms like the job board website to explore new opportunities and advance my career. My recent experience with this platform has been incredibly rewarding.I highly recommend the job board website to my fellow male frontend developers in India. Its user-friendly interface, diverse job listings, and focus on company culture make it an indispensable tool for navigating the competitive landscape of frontend development careers.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Arjun Patel</h3>
+                  <span class="position">Frontend Developer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 mb-4">
+            <div class="block__87154 bg-primary">
+              <blockquote>
+                <p class="text-white">&ldquo;As a Machine Learning Engineer deeply invested in the advancements of artificial intelligence, I often rely on platforms like the job board website to explore exciting career opportunities in this rapidly evolving field. My recent experience with the platform has been nothing short of exceptional.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3 class="text-white">Aarav Gupta</h3>
+                  <span class="position position-2">Machine Learning Engineer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;As a web designer passionate about crafting beautiful and functional digital experiences, I rely heavily on platforms like the job board website to discover exciting opportunities in the industry. My recent encounter with this platform has been nothing short of delightful.The job board website's intuitive interface and well-organized job categories made it effortless for me to explore a multitude of web design roles. The platform had a diverse range of listings tailored to my skill set and interests.Its user-friendly interface, diverse job listings, and focus on company culture make it an indispensable tool for navigating the competitive landscape of web design careers.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Aarti Patel</h3>
+                  <span class="position">Web Designer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;As an Android developer with several years of experience in the software industry, finding the right job opportunities is crucial for advancing my career. Recently, I had the pleasure of using the job board website, and I must say, it exceeded all my expectations.What impressed me the most was the quality of job listings available on the platform. From startups to multinational corporations, there was a diverse array of companies looking to hire talented Android developers like myself. The detailed job descriptions provided valuable insights into the roles and responsibilities, as well as the tech stacks and project scopes involved.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Rohan Gupta</h3>
+                  <span class="position">Android Developer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;As a Creative Director, navigating the job market can often be challenging, especially when seeking roles that align with my creative vision and expertise. However, my recent experience with the job board website has been incredibly rewarding.The platform's intuitive interface, coupled with its extensive database of job listings, has made my job search journey seamless. From graphic design to advertising, the website caters to a wide range of creative professions, ensuring that I can explore diverse opportunities within the industry.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_3.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Rajesh Kumar</h3>
+                  <span class="position">Creative Director</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;Hi, I'm Arjun Sharma, and I recently used the job board website to find my next career opportunity. As a marketing professional with several years of experience, I was looking for a platform that could connect me with reputable companies in my industry. The job board website exceeded my expectations with its user-friendly interface and extensive listings of marketing roles. Within a few weeks of signing up, I found a job that aligned perfectly with my skills and career goals. I highly recommend this platform to anyone seeking new opportunities in marketing!&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Arjun Sharma</h3>
+                  <span class="position">Marketing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <footer class="site-footer">
+
+      <a href="#top" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Search Trending</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Remote Work Opportunities</a></li>
+              <li><a href="#">Tech Jobs</a></li>
+              <li><a href="#">Data Science Positions</a></li>
+              <li><a href="#">Creative Design Opportunities</a></li>
+              <li><a href="#">Cybersecurity Roles</a></li>
+              <li><a href="#">Customer Service Jobs</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Company</h3>
+            <ul class="list-unstyled">
+              <li><a href="about.html">About Us</a></li>
+              
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Support</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Contact Us</h3>
+            <div class="footer-social">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-instagram"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright"><small>
+             
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+            </small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/stickyfill.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/quill.min.js"></script>
+    
+    
+    <script src="js/bootstrap-select.min.js"></script>
+    
+    <script src="js/custom.js"></script>
+   
+    <script>
+      window.onload = function() {
+          const username = localStorage.getItem('username');
+          const logoutButton = document.getElementById('logoutButton');
+          if (logoutButton && username) {
+            logoutButton.insertAdjacentHTML('beforebegin', `<span class="btn btn-outline-white border-width-2 d-none d-lg-inline-block mr-2">${username}</span>`);
+          }
+          
+      }
+  </script>
+     
+  </body>
+</html>

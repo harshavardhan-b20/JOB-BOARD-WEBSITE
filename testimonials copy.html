@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JobBoard </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link rel="stylesheet" href="css/custom-bs.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/line-icons/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/quill.snow.css">
+    
+    <script>
+      function logout() {
+          // Perform any logout operations if needed
+          // Redirect to login page
+          window.location.href = "/jobboard/login.html";
+      }
+  </script>
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">    
+  </head>
+  <body id="top">
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+    
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="recruiter.html">JobBoard</a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="recruiter.html" class="nav-link">Home</a></li>
+              <li><a href="about copy.html">About</a></li>
+              
+              </li>
+              <li class="has-children">
+                <a href="#">Pages</a>
+                <ul class="dropdown">
+                  
+                  <li><a href="testimonials copy.html">Testimonials</a></li>
+                  <li><a href="faq copy.html">Frequently Ask Questions</a></li>
+                  
+                </ul>
+              </li>
+              <li><a href="Candidate.html" title="Candidates">Candidates</a></li>
+              <li><a href="blog copy.html" class="active">Blog</a></li>
+              <li><a href="contact copy.html">Contact</a></li>
+              
+              <li class="d-lg-none"><a href="login.html">Log out</a></li>
+            </ul>
+          </nav>
+          
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto">
+              <button onclick="logout()"  id="logoutButton" class="btn btn-primary border-width-2 d-none d-lg-inline-block" title="Log Out"><span class="mr-2 icon-lock_outline"></span>Log Out</button>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="text-white font-weight-bold">Recruiter's Testimonials</h1>
+            <div class="custom-breadcrumbs">
+              <a href="#">Home</a> <span class="mx-2 slash">/</span>
+              <span class="text-white"><strong>Testimonials</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section" id="next-section">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;Using the JobBoard website has truly revolutionized my recruitment process. The platform's intuitive interface and extensive database of job listings have made finding qualified candidates a breeze. I've been able to streamline my workflow and connect with top-tier talent efficiently, saving both time and resources.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Priya Patel</h3>
+                  <span class="position">Google</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;As a recruiter, I rely on platforms like JobBoard to source candidates for diverse roles in my organization. The website's user-friendly design and robust search functionalities have made it easy for me to identify potential hires quickly. I appreciate the seamless experience and the quality of candidates I've found through this platform.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Rajesh Singh</h3>
+                  <span class="position">Amazon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;JobBoard has become my go-to platform for recruiting talent across various industries. The website's comprehensive job listings and advanced search filters have allowed me to target candidates with specific skill sets and experience levels. I've been impressed by the platform's effectiveness in matching candidates to our job requirements.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_3.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Siddharth Sharma</h3>
+                  <span class="position">Apple</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;I've had an excellent experience using the JobBoard website for recruitment purposes. The platform's user-friendly interface and responsive design make it accessible from any device, ensuring that I can stay productive on the go. Thanks to JobBoard, I've been able to fill key positions in a timely manner and with confidence.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Arjun Patel</h3>
+                  <span class="position">Walmart</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 mb-4">
+            <div class="block__87154 bg-primary">
+              <blockquote>
+                <p class="text-white">&ldquo;JobBoard has exceeded my expectations as a recruitment tool. The platform's extensive network of job seekers and employers has facilitated meaningful connections and resulted in successful placements. I appreciate the platform's commitment to providing a seamless experience for both recruiters and candidates alike.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3 class="text-white">Aarav Gupta</h3>
+                  <span class="position position-2">Tesla</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;As a recruiter, I value efficiency and effectiveness in my recruitment processes. JobBoard has delivered on both fronts, offering a streamlined platform for sourcing, screening, and engaging with candidates. The website's innovative features, such as automated job alerts and resume parsing, have been invaluable in helping me find the right talent for my organization.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Aarti Patel</h3>
+                  <span class="position">Samsung Electronics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;I've been thoroughly impressed by the level of support and service provided by the JobBoard team. From onboarding to ongoing assistance, they've been responsive, knowledgeable, and dedicated to helping me succeed in my recruitment efforts. It's clear that they prioritize the success of their users, and I'm grateful for their partnership.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Rohan Gupta</h3>
+                  <span class="position">Toyota Motor Corporation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;JobBoard has become an indispensable tool in my recruitment toolkit. The platform's comprehensive job listings, detailed candidate profiles, and intuitive interface have made it easy for me to source, screen, and engage with candidates effectively. I highly recommend JobBoard to any recruiter looking to streamline their hiring process.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_3.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Rajesh Kumar</h3>
+                  <span class="position">Exxon Mobil Corporation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="block__87154">
+              <blockquote>
+                <p>&ldquo;Using JobBoard has transformed the way I approach recruitment. The platform's advanced search capabilities and customizable filters have allowed me to tailor my searches to specific criteria, resulting in more targeted and successful candidate matches. I appreciate the platform's commitment to innovation and continuous improvement.&rdquo;</p>
+              </blockquote>
+              <div class="block__91147 d-flex align-items-center">
+                <figure class="mr-4"><img src="images/person_4.jpg" alt="Image" class="img-fluid"></figure>
+                <div>
+                  <h3>Arjun Sharma</h3>
+                  <span class="position">Alibaba Group Holding Limited</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <footer class="site-footer">
+
+      <a href="#top" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Search Trending</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Recruitment trends</a></li>
+              <li><a href="#">Hiring strategies</a></li>
+              <li><a href="#">Resume screening</a></li>
+              <li><a href="#">Candidate sourcing</a></li>
+              <li><a href="#">Diversity hiring</a></li>
+              <li><a href="#">Job market insights</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Company</h3>
+            <ul class="list-unstyled">
+              <li><a href="about.html">About Us</a></li>
+              
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Support</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Contact Us</h3>
+            <div class="footer-social">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-instagram"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright"><small>
+             
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+            </small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/stickyfill.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/quill.min.js"></script>
+    
+    
+    <script src="js/bootstrap-select.min.js"></script>
+    
+    <script src="js/custom.js"></script>
+   
+    <script>
+      window.onload = function() {
+          const username = localStorage.getItem('username');
+          const logoutButton = document.getElementById('logoutButton');
+          if (logoutButton && username) {
+            logoutButton.insertAdjacentHTML('beforebegin', <span class="btn btn-outline-white border-width-2 d-none d-lg-inline-block mr-2">${username}</span>);
+          }
+          
+      }
+  </script>
+     
+  </body>
+</html>

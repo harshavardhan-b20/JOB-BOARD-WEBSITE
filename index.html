@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>JobBoard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Your website description here">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <link rel="shortcut icon" href="path/to/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/custom-bs.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/line-icons/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Function to handle click events
+            $('.login-btn').click(function() {
+                // Show SweetAlert2 popup for login/signup
+                Swal.fire({
+                    title: 'Login or Sign Up',
+                    text: 'Please login or sign up to continue.',
+                    icon: 'info',
+                    showCancelButton: true,
+                    confirmButtonText: 'Sign Up',
+                    cancelButtonText: 'Login',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Redirect to signup page
+                        window.location.href = 'login.html';
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        // Redirect to login page
+                        window.location.href = 'login.html';
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body id="top">
+
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <div class="site-wrap">
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle" title="Close Menu"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div> <!-- .site-mobile-menu -->
+        <!-- NAVBAR -->
+        <header class="site-navbar mt-3">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="site-logo col-6"><a href="index.html" title="Home">JobBoard</a></div>
+
+                    <nav class="mx-auto site-navigation">
+                        <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+                            <li><a href="#" class="nav-link active login-btn" title="Home">Home</a></li>
+                            <li><a href="#" title="About" class="login-btn">About</a></li>
+
+                            <li class="has-children">
+                                <a href="#" title="Pages" class="login-btn">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="#" title="Testimonials" class="login-btn">Testimonials</a></li>
+                                    <li><a href="#" title="Frequently Ask Questions" class="login-btn">Frequently Ask
+                                            Questions</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" title="Candidates" class="login-btn">Candidates</a></li>
+                            <li><a href="#" title="Blog" class="login-btn">Blog</a></li>
+                            <li><a href="#" title="Contact" class="login-btn">Contact</a></li>
+                            <li class="d-lg-none"><a href="#" title="Post a Job" class="login-btn"><span
+                                        class="mr-2">+</span> Post a Job</a></li>
+                            <li id="userActions" style="display: none;"></li>
+                            <li class="d-lg-none"><a href="#" title="Log In" class="login-btn">Log in</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+                        <div class="ml-auto">
+                            <a href="#" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block login-btn"
+                                title="Post a Job"><span class="mr-2 icon-add"></span>Post a Job</a>
+                            <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block "
+                                title="Log In"><span class="mr-2 icon-lock_outline"></span>Log In</a>
+                        </div>
+                        <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"
+                            title="Toggle Menu"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+    <!-- HOME -->
+    <section class="home-section section-hero overlay bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-12">
+            <div class="mb-5 text-center">
+              <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
+              <p>Are you ready to discover your perfect job match? Our job board offers a wide range of opportunities to help you find your dream career.</p>
+            </div>
+            <form id="jobSearchForm" class="search-jobs-form">
+              <div class="row mb-5">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <input type="text" id="jobTitle" class="form-control form-control-lg" placeholder="Job title, Company...">
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <select id="jobLocation" class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Region">
+                    <option>Anywhere</option>
+                    <option>San Francisco</option>
+                    <option>Palo Alto</option>
+                    <option>New York</option>
+                    <option>Manhattan</option>
+                    <option>Ontario</option>
+                    <option>Toronto</option>
+                    <option>Kansas</option>
+                    <option>Mountain View</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <select id="jobType" class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Job Type">
+                    <option>Part Time</option>
+                    <option>Full Time</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <button  class="btn btn-primary btn-lg btn-block text-white btn-search login-btn"><span class="icon-search icon mr-2 "></span>Search Job</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 popular-keywords">
+                  <h3>Trending Keywords:</h3>
+                  <ul class="keywords list-unstyled m-0 p-0">
+                    <li><a href="javascript:void(0);" onclick="updateJobTitle('SDE')">SDE</a></li>
+                    <li><a href="javascript:void(0);" onclick="updateJobTitle('Python')">Python</a></li>
+                    <li><a href="javascript:void(0);" onclick="updateJobTitle('Developer')">Developer</a></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+
+      <a href="#next" class="scroll-button smoothscroll">
+        <span class=" icon-keyboard_arrow_down"></span>
+      </a>
+
+    </section>
+    
+    
+    <section class="py-5 bg-image overlay-primary fixed overlay" id="next" style="background-image: url('images/hero_1.jpg');">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-2 text-white">JobBoard Site Stats</h2>
+            <p class="lead text-white">It include the number of registered users, job postings, and successful job placements.</p>
+          </div>
+        </div>
+        <div class="row pb-0 block__19738 section-counter">
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="1930">0</strong>
+            </div>
+            <span class="caption">Candidates</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="54">0</strong>
+            </div>
+            <span class="caption">Jobs Posted</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="120">0</strong>
+            </div>
+            <span class="caption">Jobs Filled</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="550">0</strong>
+            </div>
+            <span class="caption">Companies</span>
+          </div>
+
+            
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="site-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-2">4 Job Listed</h2>
+          </div>
+        </div>
+        
+        <ul class="job-listings mb-5">
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center login-btn">
+            <a href="#"></a>
+            <div class="job-listing-logo">
+              <img src="images/job_logo_6.jpg" class="img-fluid">
+            </div>
+
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4 ">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0 ">
+                <h2>Application Engineer - II</h2>
+                <strong>Flipkart</strong>
+              </div>
+              <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                <span class="icon-room"></span> Bangalore,Karnataka
+              </div>
+              <div class="job-listing-meta">
+                <span class="badge badge-success">Full Time</span>
+              </div>
+            </div>
+            
+          </li>
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center login-btn">
+            <a href="#"></a>
+            <div class="job-listing-logo">
+              <img src="images/job_logo_7.jpg" class="img-fluid">
+            </div>
+
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>Experienced Software Engineer</h2>
+                <strong>JPMorgan Chase</strong>
+              </div>
+              <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                <span class="icon-room"></span>Anywhere
+              </div>
+              <div class="job-listing-meta">
+                <span class="badge badge-success">Full Time</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center login-btn">
+            <a href="#"></a>
+            <div class="job-listing-logo">
+              <img src="images/job_logo_3.jpg"  class="img-fluid">
+            </div>
+
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>Software Development Engineer</h2>
+                <strong>Amazon</strong>
+              </div>
+              <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                <span class="icon-room"></span> USA, WA, Bellevue 
+              </div>
+              <div class="job-listing-meta">
+                <span class="badge badge-success">Full Time</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center login-btn">
+            <a href="#"></a>
+            <div class="job-listing-logo">
+              <img src="images/job_logo_4.jpg"  class="img-fluid">
+            </div>
+
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>Technology Consulting Manager</h2>
+                <strong>Microsoft</strong>
+              </div>
+              <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                <span class="icon-room"></span> Bangalore, Karnataka 
+              </div>
+              <div class="job-listing-meta">
+                <span class="badge badge-success">Full Time</span>
+              </div>
+            </div>
+          </li>
+          
+
+          
+          </li>
+
+          
+
+          
+        </ul>
+
+        <div class="row pagination-wrap">
+          <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
+            <span>Showing 1-1 Of 4 Jobs</span>
+          </div>
+          <div class="col-md-6 text-center text-md-right">
+            <div class="custom-pagination ml-auto">
+              <a href="#" class="prev">Prev</a>
+              <div class="d-inline-block">
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              </div>
+              <a href="#" class="next">Next</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-5 bg-image overlay-primary fixed overlay" style="background-image: url('images/hero_1.jpg');">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h2 class="text-white">Looking For A Job?</h2>
+            <p class="mb-0 text-white lead">Explore exciting employment options with us! We're ready to support you every step of the way."
+
+
+
+
+            </p>
+          </div>
+          <div class="col-md-3 ml-auto">
+            <a href="login.html" class="btn btn-warning btn-block btn-lg">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="site-section py-4">
+      <div class="container">
+  
+        <div class="row align-items-center">
+          <div class="col-12 text-center mt-4 mb-5">
+            <div class="row justify-content-center">
+              <div class="col-md-7">
+                <h2 class="section-title mb-2">Company We've Helped</h2>
+                <p class="lead">Join the success story with our job board platform - where dreams meet opportunities!</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_mailchimp.svg" alt="Image" class="img-fluid logo-1">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_paypal.svg" alt="Image" class="img-fluid logo-2">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_stripe.svg" alt="Image" class="img-fluid logo-3">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_visa.svg" alt="Image" class="img-fluid logo-4">
+          </div>
+
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_apple.svg" alt="Image" class="img-fluid logo-5">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_tinder.svg" alt="Image" class="img-fluid logo-6">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_sony.svg" alt="Image" class="img-fluid logo-7">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_airbnb.svg" alt="Image" class="img-fluid logo-8">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-light pt-5 testimony-full">
+        
+        <div class="owl-carousel single-carousel">
+
+        
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 align-self-center text-center text-lg-left">
+                <blockquote>
+                  <p>Working with the job board platform has transformed our recruitment process. Its easy-to-use interface and advanced filters helped us quickly find excellent candidates. In just a few days, we had a large pool of highly qualified applicants, making our hiring process much faster. This platform has changed the way we recruit for the better.</p>
+                  <p><cite> &mdash; Corey Woods, @Dribbble</cite></p>
+                </blockquote>
+              </div>
+              <div class="col-lg-6 align-self-end text-center text-lg-right">
+                <img src="images/person_transparent_2.png" alt="Image" class="img-fluid mb-0">
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 align-self-center text-center text-lg-left">
+                <blockquote>
+                  <p>We recently used the job board platform for hiring, and it exceeded our expectations. The diverse pool of high-quality candidates, seamless integration with our tools, and hassle-free experience make it a top recommendation for any company seeking exceptional talent.</p>
+                  <p><cite> &mdash; Chris Peters, @Google</cite></p>
+                </blockquote>
+              </div>
+              <div class="col-lg-6 align-self-end text-center text-lg-right">
+                <img src="images/person_transparent.png" alt="Image" class="img-fluid mb-0">
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+    </section>
+
+   
+    
+    <footer class="site-footer">
+
+      <a href="#top" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Search Trending</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Remote Work Opportunities</a></li>
+              <li><a href="#">Tech Jobs</a></li>
+              <li><a href="#">Data Science Positions</a></li>
+              <li><a href="#">Creative Design Opportunities</a></li>
+              <li><a href="#">Cybersecurity Roles</a></li>
+              <li><a href="#">Customer Service Jobs</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Company</h3>
+            <ul class="list-unstyled">
+              <li><a href="about.html">About Us</a></li>
+              
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Support</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Contact Us</h3>
+            <div class="footer-social">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-instagram"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright"><small>
+             
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+            </small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/stickyfill.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+      function updateJobTitle(keyword) {
+          document.getElementById('jobTitle').value = keyword;
+      }
+
+</script>
+    </body>
+</html>

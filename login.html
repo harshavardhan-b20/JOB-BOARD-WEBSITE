@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JobBoard - Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="css/custom-bs.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="fonts/line-icons/style.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/quill.snow.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Additional CSS for the image */
+    .login-image-container {
+      position: absolute;
+      top: 0;
+      left: 0; /* Adjust this value to position the image */
+      width: 100%; /* Adjust this value to control the width of the image */
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+    #loginContainer {
+      position: relative;
+      padding-left: -50%; /* Adjust this value to control the space between image and login box */
+    }
+  </style>
+ 
+</head>
+
+
+
+   
+
+    <section class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-5">
+            <div class="login-image-container">
+              <img src="https://storage.googleapis.com/swayam2_central/b2c_login_pages/images/SignIn_Image.jpg" alt="Sign In Image">
+            </div>
+          </div>
+          <div class="col-lg-6 mb-5">
+            <!-- Login box -->
+            <div id="loginContainer">
+              <h2 class="mb-4">Log In To JobBoard</h2>
+              <form id="loginForm" class="p-4 border rounded">
+                <!-- Email and password inputs -->
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="text-black" for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" class="form-control" placeholder="Email address" required>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="text-black" for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" class="form-control" placeholder="Password" required>
+                  </div>
+                </div>
+                <!-- Role selection -->
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="text-black" for="loginRole">Role</label>
+                    <select id="loginRole" class="form-control" required>
+                      <option value="" disabled selected>Select your role</option>
+                      <option value="jobseeker">Job Seeker</option>
+                      <option value="recruiter">Recruiter</option>
+                      
+                    </select>
+                  </div>
+                </div>
+                <!-- Login button -->
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <input type="submit" value="Log In" class="btn px-4 btn-primary text-white">
+                    <p id="loginMessage" class="mt-2"></p>
+                  </div>
+                </div>
+              </form>
+              <!-- Signup link -->
+              <p>Don't have an account? <a href="#" id="signupLink">Sign Up</a></p>
+            </div>
+  
+
+            <!-- Signup Form -->
+            <div id="signupContainer" style="display: none;">
+              <h2 class="mb-4">Sign Up To JobBoard</h2>
+              <form id="signupForm" class="p-4 border rounded">
+                <!-- Name, email, password, and role inputs -->
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="text-black" for="signupUsername">Name</label>
+                    <input type="text" id="signupUsername" name="signupUsername" class="form-control" placeholder="Your name" required>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="text-black" for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" class="form-control" placeholder="Email address" required>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="text-black" for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" class="form-control" placeholder="Password" required>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="text-black" for="signupRePassword">Re-Type Password</label>
+                    <input type="password" id="signupRePassword" class="form-control" placeholder="Re-type Password" required>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="text-black" for="signupRole">Role</label>
+                    <select id="signupRole" class="form-control" required>
+                      <option value="" disabled selected>Select your role</option>
+                      <option value="jobseeker">Job Seeker</option>
+                      <option value="recruiter">Recruiter</option>
+                      
+                    </select>
+                  </div>
+                </div>
+          
+          <!-- Signup button -->
+          <div class="row form-group">
+            <div class="col-md-12">
+              <input type="submit" value="Sign Up" class="btn px-4 btn-primary text-white">
+              <p id="signupMessage" class="mt-2"></p>
+            </div>
+          </div>
+        </form>
+        <!-- Login link -->
+        <p>Already have an account? <a href="#" id="loginLink">Log In</a></p>
+        
+        </div>
+      </div>
+    </section>
+
+    
+  
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/stickyfill.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/quill.min.js"></script>
+  <script src="js/bootstrap-select.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

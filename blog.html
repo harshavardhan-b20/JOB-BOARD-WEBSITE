@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JobBoard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link rel="stylesheet" href="css/custom-bs.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/line-icons/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/quill.snow.css">
+    <script>
+      function logout() {
+          // Perform any logout operations if needed
+          // Redirect to login page
+          window.location.href = "/jobboard/login.html";
+      }
+  </script>
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">    
+  </head>
+  <body id="top">
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+    
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="Jobseeker.html">JobBoard</a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="Jobseeker.html" class="nav-link">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              
+              <li class="has-children">
+                <a href="#">Pages</a>
+                <ul class="dropdown">
+                  
+                  <li><a href="testimonials.html">Testimonials</a></li>
+                  <li><a href="faq.html">Frequently Ask Questions</a></li>
+                  
+                </ul>
+              </li>
+              
+              <li><a href="blog.html" class="active">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              
+              <li class="d-lg-none"><a href="login.html">Log out</a></li>
+            </ul>
+          </nav>
+          
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto">
+              <button onclick="logout()"  id="logoutButton" class="btn btn-primary border-width-2 d-none d-lg-inline-block" title="Log Out"><span class="mr-2 icon-lock_outline"></span>Log Out</button>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="text-white font-weight-bold">Our Blog</h1>
+            <div class="custom-breadcrumbs">
+              <a href="#">Home</a> <span class="mx-2 slash">/</span>
+              <span class="text-white"><strong>About Us</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.topresume.com/career-advice/what-are-hard-skills"><img src="https://d3kqdc25i4tl0t.cloudfront.net/articles/content/367ca612ed4c4f44397f6e2ba689603d_hardskills.hero.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.topresume.com/career-advice/what-are-hard-skills" class="text-black">Hard Skills Explained (and the Top 8 for Your Resume)</a></h3>
+            <div> February 06, 2024 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.topresume.com/career-advice/ask-amanda-technical-skills-resume"><img src="https://d3kqdc25i4tl0t.cloudfront.net/articles/content/774_598176_1154808068093144.CkpYyiYziBQOZFhUJYCp_height640.png" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.topresume.com/career-advice/ask-amanda-technical-skills-resume" class="text-black">11 Best Technical Skills for Your Resume (With Examples)</a></h3>
+            <div>January 22, 2024 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.topresume.com/career-advice/best-fonts-for-resume"><img src="https://d3kqdc25i4tl0t.cloudfront.net/articles/content/1594_699479_FontHero.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.topresume.com/career-advice/best-fonts-for-resume" class="text-black">What Are the Best Fonts for a Resume?</a></h3>
+            <div>January 09, 2024 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.topresume.com/career-advice/ask-amanda-how-to-add-certifications-to-resume"><img src="https://d3kqdc25i4tl0t.cloudfront.net/articles/content/791_984983_AskAmanda.med.hero.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.topresume.com/career-advice/ask-amanda-how-to-add-certifications-to-resume" class="text-black">How to List Certifications on a Resume (with Examples)</a></h3>
+            <div>December 18, 2023 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.careeraddict.com/cv-accomplishments"><img src="https://cdn0.careeraddict.com/uploads/article/57991/list-key-accomplishments-on-cv.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.careeraddict.com/cv-accomplishments" class="text-black">How to List Accomplishments in Your Résumé (Examples)</a></h3>
+            <div>January 19, 2024 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.careercontessa.com/advice/how-to-ace-an-interview/"><img src="https://www.careercontessa.com/uploadedImages/Advice/advice_3083_240124_192034-720w.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.careercontessa.com/advice/how-to-ace-an-interview/" class="text-black">How to Ace Your Interview by Bringing Your Best Self</a></h3>
+            <div>February 01, 2024 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.careercontessa.com/advice/behavior-based-interview-questions/"><img src="https://www.careercontessa.com/uploadedImages/Advice/advice_2351-720w.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.careercontessa.com/advice/behavior-based-interview-questions/" class="text-black">How to Prepare to Answer + Ask Behavioral Interview Questions</a></h3>
+            <div>January 31, 2024 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.careercontessa.com/advice/answer-looking-new-job/"><img src="https://www.careercontessa.com/uploadedImages/Advice/advice_1182-720w.jpeg" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.careercontessa.com/advice/answer-looking-new-job/" class="text-black">How to Answer "Why Are You Looking for a New Job?" in a Job Interview</a></h3>
+            <div>January 31, 2024 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.careercontessa.com/advice/phone-interviewing/"><img src="https://www.careercontessa.com/uploadedImages/Advice/advice_1144_210917_153059-720w.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.careercontessa.com/advice/phone-interviewing/" class="text-black">31 Phone Interview Tips to Master Today</a></h3>
+            <div>January 31, 2024 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.careercontessa.com/advice/use-chatgpt-to-prepare-for-job-interview/"><img src="https://www.careercontessa.com/uploadedImages/Advice/advice_3021_230606_183629-720w.jpg" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.careercontessa.com/advice/use-chatgpt-to-prepare-for-job-interview/" class="text-black">How to Use ChatGPT to Prepare for Your Job Interview</a></h3>
+            <div>January 31, 2024 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.idealist.org/en/careers/fitting-your-resume-to-the-job-listing"><img src="https://cdn.filestackcontent.com/no_metadata/output=format:webp/resize=w:1904,h:1209,fit:max/quality=value:70/compress/cache=expiry:max/2vZl11J8T16uGpHCafuV" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.idealist.org/en/careers/fitting-your-resume-to-the-job-listing" class="text-black">How to Fit Your Resume to a Job Listing</a></h3>
+            <div>Jan 22, 2024 10:00 AM <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.themuse.com/advice/how-to-answer-salary-expectations-with-no-experience"><img src="https://pilbox.themuse.com/image.png?filter=antialias&h=350&opt=1&pos=top-left&prog=1&q=keep&url=https%3A%2F%2Fcms-assets.themuse.com%2Fmedia%2Flead%2Fhow-to-answer-salary-expectations-with-no-experience.png&w=700" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.themuse.com/advice/how-to-answer-salary-expectations-with-no-experience" class="text-black">Answering "What Is Your Salary Expectation?" When You Have No Experience</a></h3>
+            <div>1/31/2024 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.themuse.com/advice/great-tech-companies-hiring-now"><img src="https://pilbox.themuse.com/image.jpg?filter=antialias&h=350&opt=1&pos=top-left&prog=1&q=keep&url=https%3A%2F%2Fcms-assets.themuse.com%2Fmedia%2Flead%2FBookingcom-Roundup-01222024.jpg&w=700" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.themuse.com/advice/great-tech-companies-hiring-now" class="text-black">22 Tech Companies That’ll Level Up Your Career—and They’re All Hiring</a></h3>
+            <div>1/22/2024 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.themuse.com/advice/how-to-close-a-cover-letter-examples"><img src="https://pilbox.themuse.com/image.png?filter=antialias&h=350&opt=1&pos=top-left&prog=1&q=keep&url=https%3A%2F%2Fcms-assets.themuse.com%2Fmedia%2Flead%2Fcover-letter-endings.png&w=700" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.themuse.com/advice/how-to-close-a-cover-letter-examples" class="text-black">How to Close a Cover Letter in 2023 (With Tips and Examples)</a></h3>
+            <div>10/20/2023 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5">
+            <a href="https://www.themuse.com/advice/slow-job-search-help"><img src="https://pilbox.themuse.com/image.png?filter=antialias&h=350&opt=1&pos=top-left&prog=1&q=keep&url=https%3A%2F%2Fcms-assets.themuse.com%2Fmedia%2Flead%2Fslow-job-search-help.png&w=700" alt="Image" class="img-fluid rounded mb-4"></a>
+            <h3><a href="https://www.themuse.com/advice/slow-job-search-help" class="text-black">6 Productive Things You Can Do During a Job Search Slump</a></h3>
+            <div>10/25/2023 <span class="mx-2">|</span> <a href="#">2 Comments</a></div>
+          </div>
+        </div>
+        <div class="row pagination-wrap mt-5">
+          
+          <div class="col-md-12 text-center ">
+            <div class="custom-pagination ml-auto">
+              <a href="#" class="prev">Prev</a>
+              <div class="d-inline-block">
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              </div>
+              <a href="#" class="next">Next</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+    <footer class="site-footer">
+
+      <a href="#top" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Search Trending</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Remote Work Opportunities</a></li>
+              <li><a href="#">Tech Jobs</a></li>
+              <li><a href="#">Data Science Positions</a></li>
+              <li><a href="#">Creative Design Opportunities</a></li>
+              <li><a href="#">Cybersecurity Roles</a></li>
+              <li><a href="#">Customer Service Jobs</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Company</h3>
+            <ul class="list-unstyled">
+              <li><a href="about.html">About Us</a></li>
+              
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Support</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Contact Us</h3>
+            <div class="footer-social">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-instagram"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright"><small>
+             
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+            </small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/stickyfill.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/quill.min.js"></script>
+    
+    
+    <script src="js/bootstrap-select.min.js"></script>
+    
+    <script src="js/custom.js"></script>
+   
+    <script>
+      window.onload = function() {
+          const username = localStorage.getItem('username');
+          const logoutButton = document.getElementById('logoutButton');
+          if (logoutButton && username) {
+            logoutButton.insertAdjacentHTML('beforebegin', `<span class="btn btn-outline-white border-width-2 d-none d-lg-inline-block mr-2">${username}</span>`);
+          }
+          
+      }
+  </script>
+     
+  </body>
+</html>

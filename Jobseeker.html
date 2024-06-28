@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>JobBoard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Your website description here">
+    <meta name="keywords" content="keyword1, keyword2, keyword3">
+    <link rel="shortcut icon" href="path/to/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/custom-bs.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/line-icons/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .job-listing-logo {
+          width: 100px; /* Adjust the width as needed */
+          height: 125px; /* Let the height adjust proportionally */
+          margin-right: 20px; /* Adjust the margin as needed */
+      }
+  </style>
+  
+
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function logout() {
+          // Perform any logout operations if needed
+          // Redirect to login page
+          window.location.href = "/jobboard/login.html";
+      }
+  </script>
+  
+</head>
+
+<body id="top">
+
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <div class="site-wrap">
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle" title="Close Menu"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div> <!-- .site-mobile-menu -->
+        <!-- NAVBAR -->
+        <header class="site-navbar mt-3">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="site-logo col-6"><a href="Jobseeker.html" title="Home">JobBoard</a></div>
+
+                    <nav class="mx-auto site-navigation">
+                        <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+                            <li><a href="Jobseeker.html" class="nav-link active" title="Home">Home</a></li>
+                            <li><a href="about.html" title="About">About</a></li>
+                            
+                            <li class="has-children">
+                                <a href="#" title="Pages">Pages</a>
+                                <ul class="dropdown">
+                                    <li><a href="testimonials.html" title="Testimonials">Testimonials</a></li>
+                                    <li><a href="faq.html" title="Frequently Ask Questions">Frequently Ask
+                                            Questions</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="blog.html" title="Blog">Blog</a></li>
+                            
+                            <li><a href="contact.html" title="Contact">Contact</a></li>
+                            <li class="d-lg-none"><a href="post-job.html" title="Post a Job"><span
+                                        class="mr-2">+</span> Post a Job</a></li>
+                            <li id="userActions" style="display: none;"></li>
+                            <li class="d-lg-none"><a href="login.html" title="Log In">Log in</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+                        <div class="ml-auto">
+                            
+                            
+                          
+                                    
+                                    <button onclick="logout()"  id="logoutButton" class="btn btn-primary border-width-2 d-none d-lg-inline-block" title="Log Out"><span class="mr-2 icon-lock_outline"></span>Log Out</button>
+
+                        </div>
+                        <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"
+                            title="Toggle Menu"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+    <!-- HOME -->
+    <section class="home-section section-hero overlay bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
+
+      <div class="container">
+        
+
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-12">
+            <div class="mb-5 text-center">
+              <div id="welcomeMessage" class="text-white font-weight-bold"></div>
+              <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
+              <p>Are you ready to discover your perfect job match? Our job board offers a wide range of opportunities to help you find your dream career.</p>
+            </div>
+            <form id="jobSearchForm" class="search-jobs-form">
+              <div class="row mb-5">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <input type="text" id="jobTitle" class="form-control form-control-lg" placeholder="Job title, Company...">
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <select id="jobLocation" class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Region">
+                    <option>Bangalore</option>
+                    <option>Mumbai</option>
+                    <option>Hyderabad</option>
+                    <option>Pune</option>
+                    <option>Delhi NCR</option>
+                    <option>Outside India</option>
+                    
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <select id="jobType" class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Job Type">
+                    <option>Part Time</option>
+                    <option>Full Time</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search"><span class="icon-search icon mr-2"></span>Search Job</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 popular-keywords">
+                  <h3>Trending Keywords:</h3>
+                  <ul class="keywords list-unstyled m-0 p-0">
+                    <li><a href="javascript:void(0);" onclick="updateJobTitle('SDE')">SDE</a></li>
+                    <li><a href="javascript:void(0);" onclick="updateJobTitle('Python')">Python</a></li>
+                    <li><a href="javascript:void(0);" onclick="updateJobTitle('Developer')">Developer</a></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+
+      <a href="#next" class="scroll-button smoothscroll">
+        <span class=" icon-keyboard_arrow_down"></span>
+      </a>
+
+    </section>
+    
+    
+    <section class="py-5 bg-image overlay-primary fixed overlay" id="next" style="background-image: url('images/hero_1.jpg');">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-2 text-white">JobBoard Site Stats</h2>
+            <p class="lead text-white">It include the number of registered users, job postings, and successful job placements.</p>
+          </div>
+        </div>
+        <div class="row pb-0 block__19738 section-counter">
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="1930">0</strong>
+            </div>
+            <span class="caption">Candidates</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="54">0</strong>
+            </div>
+            <span class="caption">Jobs Posted</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="120">0</strong>
+            </div>
+            <span class="caption">Jobs Filled</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="550">0</strong>
+            </div>
+            <span class="caption">Companies</span>
+          </div>
+
+            
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="site-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+                  
+            
+  <div class="col-md-7 text-center">
+  <h2 class="section-title mb-2"><span id="jobCount"></span> Job Listed</h2>
+</div>
+
+        </div>
+
+          
+        
+        
+          
+          <ul id="jobsList" class="job-listings">
+            <!-- Job listings will be dynamically inserted here -->
+          </ul>
+
+          <div id="job-list">
+            <!-- Job cards will be dynamically added here -->
+        </div>
+        
+          
+          </li>
+
+          
+
+          
+        </ul>
+
+        
+
+      </div>
+    </section>
+
+    <section class="py-5 bg-image overlay-primary fixed overlay" style="background-image: url('images/hero_1.jpg');">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h2 class="text-white">Need Help?</h2>
+            <p class="mb-0 text-white lead">We're ready to support you every step of the way. Feel free to contact us!
+
+
+
+
+
+
+            </p>
+          </div>
+          <div class="col-md-3 ml-auto">
+            <a href="contact.html" class="btn btn-warning btn-block btn-lg">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="site-section py-4">
+      <div class="container">
+  
+        <div class="row align-items-center">
+          <div class="col-12 text-center mt-4 mb-5">
+            <div class="row justify-content-center">
+              <div class="col-md-7">
+                <h2 class="section-title mb-2">Discover the organizations where our users have secured positions.</h2>
+                <p class="lead">Join the success story with our job board platform - where dreams meet opportunities!</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_mailchimp.svg" alt="Image" class="img-fluid logo-1">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_paypal.svg" alt="Image" class="img-fluid logo-2">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_stripe.svg" alt="Image" class="img-fluid logo-3">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_visa.svg" alt="Image" class="img-fluid logo-4">
+          </div>
+
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_apple.svg" alt="Image" class="img-fluid logo-5">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_tinder.svg" alt="Image" class="img-fluid logo-6">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_sony.svg" alt="Image" class="img-fluid logo-7">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="images/logo_airbnb.svg" alt="Image" class="img-fluid logo-8">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-light pt-5 testimony-full">
+        
+        <div class="owl-carousel single-carousel">
+
+        
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 align-self-center text-center text-lg-left">
+                <blockquote>
+                  <p>"I couldn't be happier with the job board website! Thanks to their platform, I found my dream job at Amazon Company. The user-friendly interface made it easy to search for positions, and I received helpful guidance throughout the application process. Highly recommended!"</p>
+                  <p><cite> &mdash; Michael Smith</cite></p>
+                </blockquote>
+              </div>
+              <div class="col-lg-6 align-self-end text-center text-lg-right">
+                <img src="images/person_transparent_2.png" alt="Image" class="img-fluid mb-0">
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 align-self-center text-center text-lg-left">
+                <blockquote>
+                  <p>"I was skeptical about using yet another job board, but I'm so glad I gave this one a try. Within weeks of signing up, I received multiple interview offers from top companies in my field. Thanks to their platform, I landed a fantastic job at ABC Corporation. It's been a game-changer for my career!"</p>
+                  <p><cite> &mdash; Chris Peters</cite></p>
+                </blockquote>
+              </div>
+              <div class="col-lg-6 align-self-end text-center text-lg-right">
+                <img src="images/person_transparent.png" alt="Image" class="img-fluid mb-0">
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+    </section>
+
+   
+    
+    <footer class="site-footer">
+
+      <a href="#top" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Search Trending</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Remote Work Opportunities</a></li>
+              <li><a href="#">Tech Jobs</a></li>
+              <li><a href="#">Data Science Positions</a></li>
+              <li><a href="#">Creative Design Opportunities</a></li>
+              <li><a href="#">Cybersecurity Roles</a></li>
+              <li><a href="#">Customer Service Jobs</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Company</h3>
+            <ul class="list-unstyled">
+              <li><a href="about.html">About Us</a></li>
+              
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Support</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Contact Us</h3>
+            <div class="footer-social">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-instagram"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright"><small>
+             
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+            </small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/stickyfill.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    
+    <script src="js/bootstrap-select.min.js"></script>
+    
+    <script src="js/custom.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          // Fetch job listings from the server
+          fetch('http://localhost:5500/api/jobs') // Adjust the URL as per your server endpoint
+          .then(response => response.json())
+          .then(data => {
+              const jobsList = document.getElementById('jobsList');
+              data.forEach(job => {
+                  const listItem = document.createElement('li');
+                  listItem.classList.add('job-listing', 'd-block', 'd-sm-flex', 'pb-3', 'pb-sm-0', 'align-items-center');
+                  listItem.innerHTML = `
+                      <a href="job-details.html?jobTitle=${encodeURIComponent(job.jobTitle)}"></a>
+                      <div class="job-listing-logo">
+                        <img src="${job.jobLogo}" class="img-fluid" alt="Company Logo">
+                      </div>
+                      <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                          <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                              <h2>${job.jobTitle}</h2>
+                              <strong>${job.companyName}</strong>
+                          </div>
+                          <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                              <span class="icon-room"></span> ${job.jobLocation}, ${job.jobRegion}
+                          </div>
+                          <div class="job-listing-meta">
+                              <span class="badge badge-success">${job.jobType}</span>
+                          </div>
+                      </div>
+                  `;
+                  jobsList.appendChild(listItem);
+              });
+          })
+          .catch(error => console.error('Error fetching job details:', error));
+      });
+  </script>
+    <script>
+      window.onload = function() {
+          const username = localStorage.getItem('username');
+          const logoutButton = document.getElementById('logoutButton');
+          if (logoutButton && username) {
+            logoutButton.insertAdjacentHTML('beforebegin', `<span class="btn btn-outline-white border-width-2 d-none d-lg-inline-block mr-2">${username}</span>`);
+          }
+          const welcomeMessage = document.getElementById('welcomeMessage');
+        if (welcomeMessage && username) {
+            welcomeMessage.innerHTML = `<h1 class="text-white font-weight-bold">Welcome, ${username}!</h1>`;
+        }
+      }
+  </script>
+<script>
+  function updateJobTitle(keyword) {
+      document.getElementById('jobTitle').value = keyword;
+  }
+
+</script>
+<script>
+  function searchJobs() {
+    const jobTitleInput = document.getElementById('jobTitle');
+    const jobLocationInput = document.getElementById('jobLocation');
+    const jobTypeInput = document.getElementById('jobType');
+
+    const jobTitle = jobTitleInput.value.trim();
+    const jobLocation = jobLocationInput.value.trim();
+    const jobType = jobTypeInput.value.trim();
+
+    // Make an AJAX request to search for jobs
+    fetch('http://localhost:5500/api/job/search', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ jobTitle, jobLocation, jobType })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Display the search results
+            displayJobs(data.jobs);
+
+            // Clear input fields
+            jobTitleInput.value = '';
+            jobLocationInput.value = '';
+            jobTypeInput.value = '';
+        } else {
+            console.error('Error searching for jobs:', data.message);
+        }
+    })
+    .catch(error => console.error('Error searching for jobs:', error));
+}
+
+
+
+function displayJobs(jobs) {
+                const jobsList = document.getElementById('jobsList');
+                jobsList.innerHTML = ''; // Clear previous jobs
+
+                if (jobs.length === 0) {
+        const noJobsMessage = document.createElement('p');
+        noJobsMessage.textContent = 'No jobs found.';
+        noJobsMessage.style.fontSize = '24px'; // Set font size to make it big
+        noJobsMessage.style.color = 'red'; // Set color to red
+        noJobsMessage.style.textAlign = 'center'; // Center align the message
+        noJobsMessage.style.margin = 'auto'; // Center horizontally
+        noJobsMessage.style.marginTop = '50px'; // Add some top margin for spacing
+        jobsList.appendChild(noJobsMessage);
+        return;
+                }
+
+                jobs.forEach(job => {
+                    const listItem = document.createElement('li');
+                    listItem.classList.add('job-listing', 'd-block', 'd-sm-flex', 'pb-3', 'pb-sm-0', 'align-items-center');
+                    listItem.innerHTML = `
+                        <a href="job-details.html?jobTitle=${encodeURIComponent(job.jobTitle)}"></a>
+                        <div class="job-listing-logo">
+                            <img src="${job.jobLogo}" class="img-fluid" alt="Company Logo">
+                        </div>
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>${job.jobTitle}</h2>
+                                <strong>${job.companyName}</strong>
+                            </div>
+                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                                <span class="icon-room"></span> ${job.jobLocation}, ${job.jobRegion}
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-success">${job.jobType}</span>
+                            </div>
+                        </div>
+                    `;
+                    jobsList.appendChild(listItem);
+                });
+            }
+
+            document.getElementById('jobSearchForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+                searchJobs(); // Call searchJobs function
+            });
+</script>
+
+<script>
+// Create a function to fetch the job count
+function fetchJobCount() {
+    fetch('http://localhost:5500/api/job/count') // Adjust the URL as per your server endpoint
+    .then(response => response.json())
+    .then(data => {
+        const jobCountSpan = document.getElementById('jobCount');
+        jobCountSpan.textContent = data.totalJobs; // Use data.totalJobs instead of data.count
+    })
+    .catch(error => console.error('Error fetching job count:', error));
+}
+
+// Call the fetchJobCount function whenever the page loads
+document.addEventListener("DOMContentLoaded", fetchJobCount);
+
+
+</script>
+
+  </body>
+</html>

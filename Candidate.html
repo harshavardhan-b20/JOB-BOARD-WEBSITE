@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JobBoard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/custom-bs.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/line-icons/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/quill.snow.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function logout() {
+            // Perform any logout operations if needed
+            // Redirect to login page
+            window.location.href = "/jobboard/login.html";
+        }
+    </script>
+    <style>
+        /* Custom CSS */
+        .team {
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .team .img {
+            width: 80px;
+            height: 80px;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 50%;
+            float: left;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body id="top">
+<div id="overlayer"></div>
+<div class="loader">
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<div class="site-wrap">
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+    <header class="site-navbar mt-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="site-logo col-6"><a href="recruiter.html">JobBoard</a></div>
+                <nav class="mx-auto site-navigation">
+                    <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+                        <li><a href="recruiter.html" class="nav-link">Home</a></li>
+                        <li><a href="about copy.html">About</a></li>
+                        <li class="has-children">
+                            <a href="#">Pages</a>
+                            <ul class="dropdown">
+                                <li><a href="testimonials copy.html">Testimonials</a></li>
+                                <li><a href="faq copy.html">Frequently Ask Questions</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Candidate.html"  class="active">Candidates</a></li>
+                        <li><a href="blog copy.html">Blog</a></li>
+                        <li><a href="contact copy.html">Contact</a></li>
+                        
+                        <li class="d-lg-none"><a href="login.html">Log out</a></li>
+                    </ul>
+                </nav>
+                <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+                    <div class="ml-auto">
+                        
+                        <button onclick="logout()"  id="logoutButton" class="btn btn-primary border-width-2 d-none d-lg-inline-block" title="Log Out"><span class="mr-2 icon-lock_outline"></span>Log Out</button>
+                    </div>
+                    <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 class="text-white font-weight-bold">Hire Your Best Candidates</h1>
+                    <div class="custom-breadcrumbs">
+                        <a href="#">Home</a> <span class="mx-2 slash">/</span>
+                        <span class="text-white"><strong>Candidates</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <body id="top">
+        <div class="container">
+            <div class="row">
+                <!-- First Candidate Box -->
+                <div class="col-md-6">
+                    <div class="team d-md-flex p-4 bg-light rounded shadow-sm mb-4">
+                        <div class="img rounded-circle overflow-hidden flex-shrink-0" style="background-image: url(images/person_1.jpg); width: 80px; height: 80px;"></div>
+                        <div class="text pl-md-4">
+                            <span class="location mb-0 text-muted">Western City, UK</span>
+                            <h2 class="text-primary mb-2">Emily Johnson</h2>
+                            <span class="position" style="color: orange;">Graduate</span>
+                            <p class="mb-3">Marketing Specialist | Driving Growth Through Strategic Campaigns | Social Media Expert | Content Creator</p>
+                            <span class="seen text-muted d-block mb-3">Last Activity a week ago</span>
+                            <!-- Profile information -->
+                            <div class="profile-info" style="display: none;">
+                                <p><strong>About:</strong> Marketing Specialist with expertise in driving growth through strategic campaigns and social media.</p>
+                                <p><strong>Experience:</strong> 5 years in marketing roles, specializing in content creation and social media management.</p>
+                                <p><strong>Education:</strong> Bachelor's Degree in Marketing from XYZ University.</p>
+                                <p><strong>Skills:</strong> Social media marketing, content creation, strategic campaign planning.</p>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="d-flex">
+                                <a href="#" class="btn btn-primary mr-2 view-profile-btn">View Profile</a>
+                                <a href="#" class="btn btn-outline-primary candidate-shortlist-btn">Shortlist</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Candidate Box -->
+                <div class="col-md-6">
+                    <div class="team d-md-flex p-4 bg-light rounded shadow-sm mb-4">
+                        <div class="img rounded-circle overflow-hidden flex-shrink-0" style="background-image: url(images/person_2.jpg); width: 80px; height: 80px;"></div>
+                        <div class="text pl-md-4">
+                            <span class="location mb-0 text-muted">New York City, USA</span>
+                            <h2 class="text-primary mb-2">Michael Smith</h2>
+                            <span class="position" style="color: orange;">Graduate</span>
+                            <p class="mb-3">Software Engineer | Passionate about Building Innovative Solutions | AI Enthusiast | Agile Practitioner</p>
+                            <span class="seen text-muted d-block mb-3">Last Activity 1 day ago</span>
+                            <!-- Profile information -->
+                            <div class="profile-info" style="display: none;">
+                                <p><strong>About:</strong> Software Engineer passionate about building innovative solutions, AI enthusiast, and agile practitioner.</p>
+                                <p><strong>Experience:</strong> 7 years in software development roles, focusing on AI and innovative solutions.</p>
+                                <p><strong>Education:</strong> Master's Degree in Computer Science from ABC University.</p>
+                                <p><strong>Skills:</strong> Java, Python, Machine Learning, Agile Methodologies.</p>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="d-flex">
+                                <a href="#" class="btn btn-primary mr-2 view-profile-btn">View Profile</a>
+                                <a href="#" class="btn btn-outline-primary candidate-shortlist-btn">Shortlist</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="team d-md-flex p-4 bg-light rounded shadow-sm mb-4">
+                        <div class="img rounded-circle overflow-hidden flex-shrink-0" style="background-image: url(images/person_3.jpg); width: 80px; height: 80px;"></div>
+                        <div class="text pl-md-4">
+                            <span class="location mb-0 text-muted">London, UK</span>
+                            <h2 class="text-primary mb-2">David Brown</h2>
+                            <span class="position" style="color: orange;">Graduate</span>
+                            <p class="mb-3">UX/UI Designer | Crafting Seamless User Experiences for Digital Products | Visual Design Specialist | Interaction Design Expert</p>
+                            <span class="seen text-muted d-block mb-3">Last Activity 3 months ago</span>
+                            <!-- Profile information -->
+                            <div class="profile-info" style="display: none;">
+                                <p><strong>About:</strong> UX/UI Designer specializing in crafting seamless user experiences for digital products.</p>
+                                <p><strong>Experience:</strong> 8 years in UX/UI design roles, with expertise in visual and interaction design.</p>
+                                <p><strong>Education:</strong>Bachelor's Degree in Graphic Design from DEF University.</p>
+                                <p><strong>Skills:</strong> UX/UI design, visual design, interaction design.</p>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="d-flex">
+                                <a href="#" class="btn btn-primary mr-2 view-profile-btn">View Profile</a>
+                                <a href="#" class="btn btn-outline-primary candidate-shortlist-btn">Shortlist</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                <div class="team d-md-flex p-4 bg-light rounded shadow-sm mb-4">
+                    <div class="img rounded-circle overflow-hidden flex-shrink-0" style="background-image: url(images/person_4.jpg); width: 80px; height: 80px;"></div>
+                    <div class="text pl-md-4">
+                        <span class="location mb-0 text-muted">Sydney, Australia</span>
+                        <h2 class="text-primary mb-2">James Anderson</h2>
+                        <span class="position" style="color: orange;">Graduate</span>
+                        <p class="mb-3">Passionate Software Engineer | Innovator | Problem Solver | Team Player</p>
+                        <span class="seen text-muted d-block mb-3">Last Activity 2 months ago</span>
+                        <!-- Profile information -->
+                        <div class="profile-info" style="display: none;">
+                            <p><strong>About:</strong> Passionate software engineer with a knack for innovation and problem-solving.</p>
+                            <p><strong>Experience:</strong> Extensive experience in software development and team collaboration.</p>
+                            <p><strong>Education:</strong> Bachelor's Degree in Computer Science from ABC University.</p>
+                            <p><strong>Skills:</strong> Software development, problem-solving, team collaboration.</p>
+                        </div>
+                        <!-- Buttons -->
+                        <div class="d-flex">
+                            <a href="#" class="btn btn-primary mr-2 view-profile-btn">View Profile</a>
+                            <a href="#" class="btn btn-outline-primary candidate-shortlist-btn">Shortlist</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+                
+                <div class="col-md-6">
+                    <div class="team d-md-flex p-4 bg-light rounded shadow-sm mb-4">
+                        <div class="img rounded-circle overflow-hidden flex-shrink-0" style="background-image: url(images/person_5.jpg); width: 80px; height: 80px;"></div>
+                        <div class="text pl-md-4">
+                            <span class="location mb-0 text-muted">Paris, France</span>
+                            <h2 class="text-primary mb-2">Daniel Wilson</h2>
+                            <span class="position" style="color: orange;">Graduate</span>
+                            <p class="mb-3">Experienced Marketing Professional | Creative Strategist | Data-Driven Marketer | Growth Hacker</p>
+                            <span class="seen text-muted d-block mb-3">Last Activity 1 month ago</span>
+                            <!-- Profile information -->
+                            <div class="profile-info" style="display: none;">
+                                <p><strong>About:</strong> Experienced marketing professional with a focus on creativity and data-driven strategies.</p>
+                                <p><strong>Experience:</strong> Proven track record in developing successful marketing campaigns.</p>
+                                <p><strong>Education:</strong> Master's Degree in Marketing from XYZ University.</p>
+                                <p><strong>Skills:</strong> Marketing strategy, creativity, data analysis.</p>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="d-flex">
+                                <a href="#" class="btn btn-primary mr-2 view-profile-btn">View Profile</a>
+                                <a href="#" class="btn btn-outline-primary candidate-shortlist-btn">Shortlist</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+                    <div class="team d-md-flex p-4 bg-light rounded shadow-sm mb-4">
+                        <div class="img rounded-circle overflow-hidden flex-shrink-0" style="background-image: url(images/person_6.jpg); width: 80px; height: 80px;"></div>
+                        <div class="text pl-md-4">
+                            <span class="location mb-0 text-muted">Tokyo, Japan</span>
+                            <h2 class="text-primary mb-2">Jessica Taylor</h2>
+                            <span class="position" style="color: orange;">Graduate</span>
+                            <p class="mb-3">HR Manager | Building Strong Teams through Effective Talent Management | Employee Relations Specialist | Recruitment Strategist</p>
+                            <span class="seen text-muted d-block mb-3">Last Activity a day ago</span>
+                            <!-- Profile information -->
+                            <div class="profile-info" style="display: none;">
+                                <p><strong>About:</strong> HR Manager with a focus on talent management and recruitment strategy.</p>
+                                <p><strong>Experience:</strong> Extensive experience in employee relations and recruitment.</p>
+                                <p><strong>Education:</strong> Master's Degree in Human Resource Management from XYZ University.</p>
+                                <p><strong>Skills:</strong> Talent management, recruitment strategy, employee relations.</p>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="d-flex">
+                                <a href="#" class="btn btn-primary mr-2 view-profile-btn">View Profile</a>
+                                <a href="#" class="btn btn-outline-primary candidate-shortlist-btn">Shortlist</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                    
+                </div>
+                <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content border-0">
+                            <div class="modal-header bg-primary text-white">
+                                <h5 class="modal-title" id="profileModalLabel">Candidate Profile</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-10">
+                                            <div class="profile-info">
+                                                <!-- Profile information will be dynamically added here -->
+                                                <div id="profileInfo"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary contact-candidate-btn" data-email="Emily Johnson@Gmail.com"><i class="icon-envelope"></i> Contact Candidate</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+    
+
+    </div>
+  </section>
+  
+  <footer class="site-footer">
+
+    <a href="#top" class="smoothscroll scroll-top">
+      <span class="icon-keyboard_arrow_up"></span>
+    </a>
+
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-6 col-md-3 mb-4 mb-md-0">
+          <h3>Search Trending</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Remote Work Opportunities</a></li>
+            <li><a href="#">Tech Jobs</a></li>
+            <li><a href="#">Data Science Positions</a></li>
+            <li><a href="#">Creative Design Opportunities</a></li>
+            <li><a href="#">Cybersecurity Roles</a></li>
+            <li><a href="#">Customer Service Jobs</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4 mb-md-0">
+          <h3>Company</h3>
+          <ul class="list-unstyled">
+            <li><a href="about.html">About Us</a></li>
+            
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4 mb-md-0">
+          <h3>Support</h3>
+          <ul class="list-unstyled">
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 mb-4 mb-md-0">
+          <h3>Contact Us</h3>
+          <div class="footer-social">
+            <a href="#"><span class="icon-facebook"></span></a>
+            <a href="#"><span class="icon-twitter"></span></a>
+            <a href="#"><span class="icon-instagram"></span></a>
+            <a href="#"><span class="icon-linkedin"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-12">
+          <p class="copyright"><small>
+           
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+          </small></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+  <!-- SCRIPTS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/stickyfill.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/quill.min.js"></script>
+  
+  
+  <script src="js/bootstrap-select.min.js"></script>
+  
+  <script src="js/custom.js"></script>
+ 
+  <script>
+    // JavaScript to handle opening the modal and populating profile information
+    $(document).ready(function() {
+        // Handle click on "View Profile" button
+        $('.view-profile-btn').click(function() {
+            // Get the relevant profile information
+            var profileInfo = $(this).closest('.team').find('.profile-info').html();
+
+            // Populate the modal with profile information
+            $('#profileInfo').html(profileInfo);
+
+            // Open the modal
+            $('#profileModal').modal('show');
+        });
+    });
+</script>
+   
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+<script>
+    // Function to show SweetAlert2 confirmation
+    function showConfirmation() {
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Candidate shortlisted successfully',
+            showConfirmButton: false,
+            timer: 2000 // Close the alert after 2 seconds
+        });
+    }
+
+    // JavaScript to handle shortlisting action
+document.querySelectorAll('.candidate-shortlist-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        // Perform shortlisting action here
+        // For demonstration purposes, let's just show the alert
+        showConfirmation();
+    });
+});
+
+</script>
+
+<script>
+    window.onload = function() {
+        const username = localStorage.getItem('username');
+        const logoutButton = document.getElementById('logoutButton');
+        if (logoutButton && username) {
+          logoutButton.insertAdjacentHTML('beforebegin', `<span class="btn btn-outline-white border-width-2 d-none d-lg-inline-block mr-2">${username}</span>`);
+        }
+        
+    }
+</script>
+<script>
+    // JavaScript to handle opening Gmail with candidate's email pre-filled
+document.addEventListener('DOMContentLoaded', function() {
+    const contactButtons = document.querySelectorAll('.contact-candidate-btn');
+    contactButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const recipientEmail = button.dataset.email; // Fetch the email address from data attribute
+            const subject = encodeURIComponent('Job Inquiry'); // Specify the subject of the email
+            const body = encodeURIComponent('Hello,\n\nI am interested in discussing the job opportunity further. Please let me know your availability.\n\nThank you.'); // Specify the body of the email
+            window.open(`mailto:${recipientEmail}?subject=${subject}&body=${body}`);
+        });
+    });
+});
+
+</script>
+</body>
+</html>
